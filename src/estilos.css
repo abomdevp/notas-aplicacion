@@ -1,0 +1,217 @@
+:root {
+  --bg-sidebar: #f5f5f5;
+  --bg-main: #ffffff;
+  --border-color: #e0e0e0;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --primary-color: #42b883;
+  --danger-color: #ff4757;
+  --hover-color: #eaeaea;
+  --active-color: #e3f2fd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  height: 100%;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.btn-crear {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-crear:hover {
+  background-color: #3aa876;
+}
+
+.lista-notas {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nota-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.nota-item:hover {
+  background-color: var(--hover-color);
+}
+
+.nota-item.activa {
+  background-color: var(--active-color);
+  border-left: 4px solid var(--primary-color);
+}
+
+.nota-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.nota-titulo {
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nota-fecha {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.btn-eliminar:hover {
+  color: var(--danger-color);
+  background-color: rgba(255, 71, 87, 0.1);
+}
+
+/* Editor */
+.editor-panel {
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-main);
+}
+
+.editor-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editor-fecha {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.btn-guardar {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-guardar:hover {
+  background-color: #3aa876;
+}
+
+.editor-textarea {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+  border: none;
+  resize: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  outline: none;
+}
+
+/* Vista Previa */
+.preview-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--bg-main);
+}
+
+.preview-header {
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.preview-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.preview-content h1, .preview-content h2, .preview-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.preview-content h1:first-child {
+  margin-top: 0;
+}
+
+.preview-content p {
+  margin-bottom: 1em;
+}
+
+.preview-content ul, .preview-content ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.mensaje-vacio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  font-style: italic;
+}
