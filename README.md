@@ -1,6 +1,20 @@
-# Vue 3 + Vite
+# Notas
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplicación de notas, ¡Crea y guarda tus notas para usarlas más adelante!
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
-# notas-aplicacion
+## Historias de usuario
+
+Utilice las siguientes historias de usuario para desarrollar esta aplicación
+
+- El usuario puede `crear` una nota
+- El usuario puede `editar` una nota
+- El usuario puede `eliminar` una nota
+- Al cerrar la ventana del navegador, las notas `se guardarán` y, cuando el usuario regrese, se recuperarán los datos
+
+## Caracteristicas adicionales:
+- El usuario puede `crear y editar` una nota en formato Markdown. Al guardarla, se convertirá a HTML.
+- El usuario puede `ver `la fecha en que creó la nota.
+
+## Enlace
+
+https://notas-aplicacion.vercel.app/
